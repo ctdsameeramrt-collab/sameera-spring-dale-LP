@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/sameera-spring-dale-LP/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
