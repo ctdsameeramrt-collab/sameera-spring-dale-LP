@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Marcellus", "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Custom Forest Green & Warm Gold Theme */
+  --color-brand-green-950: #06180e;
+  --color-brand-green-900: #0c2b1a;
+  --color-brand-green-850: #123e26;
+  --color-brand-green-800: #1b5335;
+  --color-brand-green-700: #267149;
+  --color-brand-green-600: #348e5c;
+  --color-brand-green-500: #46ab73;
+  
+  --color-brand-gold-100: #fcf8ee;
+  --color-brand-gold-200: #f5ebce;
+  --color-brand-gold-300: #ead8aa;
+  --color-brand-gold-400: #dbbf80;
+  --color-brand-gold-500: #c29d53;
+  --color-brand-gold-600: #a78241;
+  --color-brand-gold-700: #8c6a32;
+  --color-brand-gold-800: #715224;
+
+  --color-brand-beige-50: #faf8f5;
+  --color-brand-beige-100: #f4ede3;
+  --color-brand-beige-200: #eadcc6;
+  --color-brand-beige-300: #dcbe9d;
+  
+  --animate-gold-shimmer: gold-shimmer 2s infinite linear;
+  --animate-float: float 4s ease-in-out infinite;
+  
+  @keyframes gold-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #0c2b1a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1b5335;
+}
+
+/* Glassmorphism utility classes */
+.glass-nav {
+  background: rgba(12, 43, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(194, 157, 83, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(194, 157, 83, 0.1);
+}
+
+.glass-card-dark {
+  background: rgba(12, 43, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(194, 157, 83, 0.15);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5ebce 0%, #c29d53 50%, #8c6a32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #ead8aa 0%, #c29d53 60%, #a78241 100%);
+}
+
+.bg-shimmer-btn {
+  background: linear-gradient(90deg, #c29d53 0%, #ead8aa 25%, #c29d53 50%, #eaadaa 75%, #c29d53 100%);
+  background-size: 200% auto;
+}
+
